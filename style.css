@@ -1,0 +1,125 @@
+/* Base Styles */
+:root {
+    --stone-50: #f8f8f7;
+    --stone-100: #f1f1ef;
+    --stone-200: #e7e7e4;
+    --stone-500: #73736d;
+    --stone-600: #575752;
+    --stone-800: #292927;
+    --stone-900: #1c1c1a;
+    --serif: "Noto Serif JP", serif;
+    --sans: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--sans); color: var(--stone-800); background: #fff; line-height: 1.8; overflow-x: hidden; }
+.font-serif { font-family: var(--serif); }
+
+/* Navigation */
+nav {
+    position: fixed; top: 0; width: 100%; height: 80px;
+    background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--stone-200); z-index: 1000;
+}
+.nav-container {
+    max-width: 1200px; margin: 0 auto; height: 100%;
+    display: flex; justify-content: space-between; align-items: center; padding: 0 24px;
+}
+.logo { text-align: center; text-decoration: none; color: inherit; }
+.logo h1 { font-size: 24px; letter-spacing: 0.2em; font-family: var(--serif); }
+.logo span { font-size: 10px; letter-spacing: 0.2em; color: var(--stone-500); text-transform: uppercase; }
+
+.nav-links { display: flex; gap: 40px; }
+.nav-links a {
+    text-decoration: none; color: var(--stone-600); font-size: 12px;
+    letter-spacing: 0.15em; font-weight: 500; transition: 0.3s;
+}
+.nav-links a.active { color: var(--stone-900); border-bottom: 1px solid var(--stone-900); }
+.nav-links a:hover { color: var(--stone-900); }
+
+.mobile-toggle { display: none; background: none; border: none; cursor: pointer; }
+
+/* Mobile Menu */
+#mobile-menu {
+    display: none; position: absolute; top: 80px; left: 0; width: 100%;
+    background: white; border-bottom: 1px solid var(--stone-200);
+    padding: 32px 24px; flex-direction: column; gap: 24px; text-align: center;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+#mobile-menu.active { display: flex; }
+#mobile-menu a { text-decoration: none; color: var(--stone-800); letter-spacing: 0.2em; font-size: 14px; }
+
+/* Sections */
+section { padding: 100px 24px; max-width: 1200px; margin: 0 auto; }
+.sec-title { text-align: center; margin-bottom: 80px; }
+.sec-title h3 { font-size: 32px; font-family: var(--serif); margin-bottom: 12px; }
+.sec-title p { font-size: 10px; letter-spacing: 0.2em; color: var(--stone-500); text-transform: uppercase; }
+
+/* Hero */
+.hero {
+    height: 100vh; position: relative; display: flex; align-items: center; justify-content: center;
+    color: white; text-align: center; overflow: hidden;
+}
+.hero-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); z-index: -1; }
+.hero h2 { font-size: 48px; font-family: var(--serif); letter-spacing: 0.2em; margin-bottom: 40px; }
+.btn-outline {
+    border: 1px solid rgba(255,255,255,0.4); background: none; color: white;
+    padding: 16px 48px; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase;
+    text-decoration: none; transition: 0.5s;
+}
+.btn-outline:hover { background: white; color: var(--stone-900); }
+
+/* Grid */
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 48px; }
+.card { cursor: pointer; text-decoration: none; color: inherit; }
+.card-img { aspect-ratio: 4/5; overflow: hidden; margin-bottom: 24px; background: var(--stone-100); }
+.card-img img { width: 100%; height: 100%; object-fit: cover; transition: 1s; }
+.card:hover img { transform: scale(1.1); }
+.card h4 { font-family: var(--serif); font-size: 18px; margin-bottom: 4px; }
+.card p { color: var(--stone-500); font-size: 14px; font-weight: 300; }
+
+/* Info */
+.bg-stone { background: var(--stone-50); max-width: 100%; }
+.info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.info-item { display: flex; gap: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--stone-200); margin-bottom: 24px; }
+.info-item svg { color: var(--stone-500); flex-shrink: 0; }
+.info-label { font-size: 10px; font-weight: bold; letter-spacing: 0.2em; margin-bottom: 8px; color: var(--stone-800); }
+.info-value { font-size: 14px; color: var(--stone-600); }
+
+/* Menu Page */
+.menu-header { padding-top: 160px; text-align: center; margin-bottom: 80px; }
+.menu-section { margin-bottom: 100px; }
+.menu-category { display: flex; align-items: center; gap: 16px; margin-bottom: 40px; }
+.menu-category div { height: 1px; background: var(--stone-800); flex: 1; }
+.menu-category h3 { font-family: var(--serif); font-style: italic; font-size: 20px; }
+
+.menu-row { display: flex; justify-content: space-between; align-items: flex-end; padding-bottom: 16px; border-bottom: 1px solid var(--stone-100); margin-bottom: 24px; }
+.menu-row h4 { font-size: 16px; font-weight: bold; color: var(--stone-800); }
+.menu-row span { font-family: var(--serif); color: var(--stone-800); }
+.menu-desc { font-size: 12px; color: var(--stone-500); margin-top: 4px; }
+
+/* Footer */
+footer { background: var(--stone-900); color: var(--stone-500); padding: 80px 24px; text-align: center; }
+footer h2 { color: white; font-family: var(--serif); letter-spacing: 0.2em; margin-bottom: 8px; }
+
+/* Floating Button */
+.float-btn {
+    position: fixed; bottom: 32px; right: 32px; background: var(--stone-800); color: white;
+    padding: 16px 24px; border-radius: 40px; text-decoration: none; display: flex; align-items: center; gap: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2); z-index: 1100; font-size: 10px; font-weight: bold; letter-spacing: 0.2em; transition: 0.3s;
+}
+.float-btn:hover { background: var(--stone-900); transform: scale(1.05); }
+
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .mobile-toggle { display: block; }
+    .info-grid { grid-template-columns: 1fr; }
+    .hero h2 { font-size: 32px; }
+    .float-btn span { display: none; }
+    .float-btn { padding: 16px; border-radius: 50%; }
+}
+
+/* Animation */
+.fade-in { animation: fadeIn 1s forwards; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }

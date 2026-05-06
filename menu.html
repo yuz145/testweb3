@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - LUCE Ristorante</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <h1>LUCE</h1>
+                <span>Ristorante</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="menu.html" class="active">MENU</a>
+                <a href="index.html#access">ACCESS</a>
+            </div>
+            <button class="mobile-toggle" onclick="toggleMenu()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+        <div id="mobile-menu">
+            <a href="index.html">HOME</a>
+            <a href="menu.html">MENU</a>
+            <a href="index.html#access" onclick="toggleMenu()">ACCESS</a>
+        </div>
+    </nav>
+
+    <div class="menu-header fade-in">
+        <h2 class="font-serif" style="font-size: 32px; letter-spacing: 0.3em; text-transform: uppercase;">Menu</h2>
+        <div style="width: 40px; height: 1px; background: #ddd; margin: 24px auto;"></div>
+    </div>
+
+    <section class="menu-section fade-in">
+        <div class="menu-category">
+            <div class="line"></div>
+            <h3>Course Menu</h3>
+            <div class="line"></div>
+        </div>
+        <div class="menu-row">
+            <div>
+                <h4>LUCE Season Course</h4>
+                <p class="menu-desc">旬の食材を散りばめたフルコース（前菜・スープ・魚・肉・デザート）</p>
+            </div>
+            <span>¥12,000</span>
+        </div>
+        <div class="menu-row">
+            <div>
+                <h4>Chef's Special Special</h4>
+                <p class="menu-desc">その日最も輝いている食材を用いた、シェフ渾身のお任せコース</p>
+            </div>
+            <span>¥18,000</span>
+        </div>
+
+        <div class="menu-category" style="margin-top: 100px;">
+            <div class="line"></div>
+            <h3>A La Carte</h3>
+            <div class="line"></div>
+        </div>
+        <div class="grid-3">
+            <div class="menu-row"><h4 style="font-weight: normal; font-size: 14px;">真鯛のカルパッチョ</h4><span>¥2,200</span></div>
+            <div class="menu-row"><h4 style="font-weight: normal; font-size: 14px;">有機野菜のグリル</h4><span>¥1,800</span></div>
+            <div class="menu-row"><h4 style="font-weight: normal; font-size: 14px;">自家製生ハム盛り合わせ</h4><span>¥2,400</span></div>
+            <div class="menu-row"><h4 style="font-weight: normal; font-size: 14px;">季節のポタージュ</h4><span>¥1,200</span></div>
+            <div class="menu-row"><h4 style="font-weight: normal; font-size: 14px;">アサリとカラスミのパスタ</h4><span>¥2,600</span></div>
+            <div class="menu-row"><h4 style="font-weight: normal; font-size: 14px;">仔羊のロースト</h4><span>¥3,800</span></div>
+        </div>
+
+        <div style="text-align: center; margin-top: 80px;">
+            <a href="index.html" style="font-size: 10px; letter-spacing: 0.3em; color: #aaa; text-underline-offset: 8px;">BACK TO TOP</a>
+        </div>
+    </section>
+
+    <footer>
+        <h2>LUCE</h2>
+        <p style="font-size: 10px; letter-spacing: 0.1em; opacity: 0.6; margin-top: 40px;">© 2026 Ristorante LUCE.</p>
+    </footer>
+
+    <a href="tel:0300000000" class="float-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l2.27-2.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        <span>RESERVATION</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
